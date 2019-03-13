@@ -59,8 +59,7 @@ RSpec.describe User, type: :model do
       expect(user.role).to eql("member")
     end
 
-    # TODO: Re-enable after shoulda-matchers updates for Rails 6
-    # it { should validate_presence_of(:role) }
+    it { should validate_presence_of(:role) }
   end
 
   describe "Associations" do

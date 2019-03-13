@@ -155,3 +155,7 @@ else
   # Use headless_chrome for any feature tests marked with js: true
   Capybara.javascript_driver = :headless_chrome
 end
+
+# Rails 6 shoulda-matchers issue workaround
+# https://github.com/thoughtbot/shoulda-matchers/issues/1167
+class ActiveModel::SecurePassword::InstanceMethodsOnActivation; end
